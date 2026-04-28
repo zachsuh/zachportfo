@@ -137,6 +137,12 @@ export default function Home() {
               to George Mason University, awarded to top students for academic
               performance and leadership.
             </li>
+            <li>
+              Worked at five restaurants under Michelin-star chefs. I ran the
+              back-of-house kitchen at 17 and earned my Certified Professional
+              Food Manager license early because I wanted to understand how
+              things actually work under pressure.
+            </li>
           </ul>
         </section>
 
