@@ -1,26 +1,216 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ececec;
+  --foreground: #151515;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-manrope);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ececec;
+    --foreground: #151515;
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
+  line-height: 1.45;
+}
+
+a {
+  color: inherit;
+}
+
+.minimal-page {
+  min-height: 100vh;
+  padding: 34px 0 28px;
+}
+
+.minimal-card {
+  width: min(100%, 560px);
+  margin: 0 auto;
+  padding: 0 12px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.minimal-card a {
+  color: #1d4ed8;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.08em;
+}
+
+.minimal-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 2px;
+  margin-bottom: 20px;
+}
+
+.minimal-header h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.04;
+}
+
+.minimal-header nav {
+  display: flex;
+  gap: 28px;
+  margin: 0;
+}
+
+.minimal-header nav a {
+  color: #636a73;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.quick-links {
+  margin: 0 0 24px;
+}
+
+.quick-links a {
+  margin-right: 10px;
+}
+
+.intro {
+  margin-bottom: 10px;
+}
+
+.intro p {
+  margin: 0 0 8px;
+}
+
+.intro-photo {
+  float: right;
+  width: 160px;
+  height: 160px;
+  margin: 4px 0 6px 12px;
+  object-fit: cover;
+  object-position: center 28%;
+  transform: scale(1.04);
+  transform-origin: center;
+}
+
+.build-section {
+  margin-top: 14px;
+}
+
+.build-section h2 {
+  margin: 0 0 4px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.section-lead {
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+
+.build-section ul {
+  margin: 0;
+  padding-left: 18px;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.build-section li {
+  display: list-item;
+  margin-bottom: 7px;
+}
+
+.build-section li::marker {
+  content: "• ";
+}
+
+.highlight-link {
+  color: #1d4ed8;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.08em;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.food-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.food-item {
+  margin: 0;
+}
+
+.food-item figcaption {
+  margin-top: 6px;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.minimal-footer {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  padding-top: 8px;
+  border-top: 1px solid #d2d2d2;
+}
+
+.minimal-footer a {
+  text-decoration: underline;
+  text-underline-offset: 0.08em;
+}
+
+@media (max-width: 640px) {
+  .minimal-card {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .minimal-header h1 {
+    font-size: 28px;
+  }
+
+  .minimal-header nav {
+    gap: 16px;
+  }
+
+  .minimal-header nav a {
+    font-size: 14px;
+  }
+
+  .intro-photo {
+    width: 120px;
+    height: 120px;
+    margin-left: 10px;
+  }
+
+  .food-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
