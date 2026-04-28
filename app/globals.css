@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ececec;
+  --background: #f3efe7;
   --foreground: #151515;
 }
 
@@ -13,7 +13,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ececec;
+    --background: #f3efe7;
     --foreground: #151515;
   }
 }
@@ -40,7 +40,7 @@ a {
 }
 
 .minimal-card {
-  width: min(100%, 560px);
+  width: min(100%, 680px);
   margin: 0 auto;
   padding: 0 12px;
   font-size: 13px;

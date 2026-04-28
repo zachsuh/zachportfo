@@ -25,7 +25,7 @@ export default function Home() {
         <section className="intro">
           <img
             className="intro-photo"
-            src="/zach.jpg"
+            src="/zach.JPG"
             alt="Portrait"
             width={160}
             height={110}
