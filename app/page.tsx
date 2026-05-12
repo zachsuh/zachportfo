@@ -3,7 +3,7 @@ export default function Home() {
     <main className="minimal-page">
       <article className="minimal-card">
         <header className="minimal-header">
-          <h1>Zachary Suh</h1>
+          <h1><a href="/">Zachary Suh</a></h1>
         </header>
         <p className="quick-links">
           <a
@@ -19,7 +19,8 @@ export default function Home() {
             rel="noreferrer"
           >
             Chat
-          </a>
+          </a>{" "}
+          <a href="/writings">Writings</a>
         </p>
 
         <section className="intro">
